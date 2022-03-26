@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Temperatura {
@@ -9,9 +10,9 @@ public class Temperatura {
         double fahrenheit = input.nextDouble();
         final double ajuste = 32;
         double celsius = (fahrenheit - ajuste) * 5 / 9;
-
+        DecimalFormat df = new DecimalFormat("##.0");
         System.out
-                .println("A temperatura " + fahrenheit + " convertida para Celcius é equivalente a " + celsius + "ºC");
+                .println("A temperatura " + fahrenheit + " convertida para Celcius é equivalente a " + df.format(celsius) + "ºC");
 
     }
 }
